@@ -1,0 +1,8 @@
+/* section02 典型要素*/
+#section02{
+  @extend %frame;
+  top: -50px;
+  @include lg {
+    margin-top: 90px;
+  }
+}

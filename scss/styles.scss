@@ -11,17 +11,18 @@
 @import './extends/frame';
 
 // 全域設定
-@import './_global';
+@import './global';
 
 // 區塊結構
 @import 'navbar';
 @import 'home';
 @import './section01';
-@import 'section02';
-@import 'section03';
-@import 'section04';
-@import 'section05';
+@import './section02';
+@import './section03';
+@import './section04';
+@import './section05';
 @import 'footer';
 
 // 功能
 @import './features/modal';
+@import './features/swiper';
