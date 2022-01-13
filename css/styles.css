@@ -424,8 +424,8 @@ body {
 /* footer 頁尾版權 */
 #footer {
   color: white;
-  background: -webkit-gradient(linear, left top, right top, from(transpareant), color-stop(50%, rgba(0, 0, 0, 0.5)), to(transpareant));
-  background: linear-gradient(90deg, transpareant 0%, rgba(0, 0, 0, 0.5) 50%, transpareant 100%);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, rgba(0, 0, 0, 0.5)), to(transparent));
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
 }
 
 #footer a {
@@ -639,5 +639,167 @@ body {
 @media (min-width: 1200px) {
   .swiper {
     height: 400px;
+  }
+}
+
+/* backtop 返回頂端 */
+.backtop {
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+}
+
+.backtop_item {
+  width: 100%;
+  height: 100%;
+}
+
+.backtop_item a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(../../images/arrow_top.png) no-repeat center/100px;
+  -webkit-transform: 0.3s;
+          transform: 0.3s;
+}
+
+.backtop_item a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background: url(../../images/arrow_top_hover.png) no-repeat center/100px;
+}
+
+body {
+  overflow-x: hidden;
+  background: url(../../images/mask.png) no-repeat fixed 50% 0%/100% 100%, url(../../images/night_sky.jpg) no-repeat fixed 50% 0%;
+}
+
+.float-parallax {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .float-parallax {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .float-parallax .float-wrap-01 {
+    width: 280px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  .float-parallax .float-wrap-01 .float-island {
+    width: 100%;
+    height: 100%;
+    background: url(../../images/float-island-01.png) no-repeat center/100%;
+  }
+  .float-parallax .float-wrap-02 {
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+  }
+  .float-parallax .float-wrap-02 .float-island {
+    width: 100%;
+    height: 100%;
+    background: url(../../images/float-island-02.png) no-repeat center/100%;
+  }
+  .float-parallax .float-wrap-03 {
+    width: 100%;
+    height: 507px;
+    position: absolute;
+    bottom: 0;
+  }
+  .float-parallax .float-wrap-03 .float-island {
+    width: 100%;
+    height: 100%;
+    background: url(../../images/float-island-03.png) no-repeat center/100%;
+  }
+}
+
+.shooting_star {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .shooting_star {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .shooting_star .star {
+    width: 200px;
+    height: 2px;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    background: -webkit-gradient(linear, left top, right top, from(white), color-stop(60%, transparent));
+    background: linear-gradient(90deg, white 0%, transparent 60%);
+  }
+}
+
+#splitText {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #splitText {
+    font-size: 2rem;
+    width: 1000px;
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  #splitText p {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #splitText p .charBg {
+    margin: 0.2rem;
+    text-shadow: 1px 1px 1px black;
+    -webkit-filter: drop-shadow(0 0 5px white) drop-shadow(0 0 10px yellow) drop-shadow(0 0 30px white);
+            filter: drop-shadow(0 0 5px white) drop-shadow(0 0 10px yellow) drop-shadow(0 0 30px white);
   }
 }
